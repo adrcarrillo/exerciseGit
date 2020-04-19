@@ -1,10 +1,9 @@
 package com.arn.hellojava;
 
+
+import com.formdev.flatlaf.FlatDarkLaf;
 import javax.swing.*;
 
-/**
- * A bare bones graphical version of Hello World.
- */
 public class HelloJava {
     public static void main( String[] args ) {
 
@@ -12,7 +11,8 @@ public class HelloJava {
         try {
             //Original line
 //          UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+            UIManager.setLookAndFeel( new FlatDarkLaf() );
+
         }
         catch (Exception e) {
             System.out.println("Look and Feel not set");
